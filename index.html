@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Train Your Math Auto Recall</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="styles/main.css" type="text/css" />
+        <style type="text/css">
+            [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display: none !important;}   
+        </style>
+        
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.1/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+    </head>
+    <body ng-app='mathRecall' ng-controller='testRecall' ng-init="notifyResult='Welcome, try to answer the qustion below.'">
+        <div class="container-fluid">
+            <div class="fixedContainer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 ng-cloak>{{ notifyResult }}</h3>
+                        <h3 ng-cloak style='margin-top:-10px;'>{{ timeTaken }}</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9"><h1 ng-cloak>{{ firstNumber }} {{ operator }} {{ secondNumber }} = {{ result }}</h1></div>
+                    <div class="col-sm-3 custClearBtn" ng-click='clearNumber()'><h2>C</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(7)'><h1>7</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(8)'><h1>8</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(9)'><h1>9</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(4)'><h1>4</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(5)'><h1>5</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(6)'><h1>6</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(1)'><h1>1</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(2)'><h1>2</h1></div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(3)'><h1>3</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 custBtn" style="border:none;background-color:transparent;">
+                        <h1></h1>
+                    </div>
+                    <div class="col-sm-4 custBtn" ng-click='addNumber(0)'><h1>0</h1></div>
+                    <div class="col-sm-4 custBtn" style="border:none;background-color:transparent;">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
